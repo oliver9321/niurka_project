@@ -1,0 +1,148 @@
+{
+  "theme": "light",
+  "archetype": "4 - Swiss & High-Contrast (Adapted for Engineering/Tech)",
+  "colors": {
+    "primary": {
+      "DEFAULT": "#00B368",
+      "hover": "#009154",
+      "foreground": "#FFFFFF",
+      "light": "#E6F7F0"
+    },
+    "background": "#FFFFFF",
+    "surface": "#F4F4F5",
+    "surface_alt": "#FAFAFA",
+    "border": "#E4E4E7",
+    "text": {
+      "primary": "#09090B",
+      "secondary": "#52525B",
+      "muted": "#A1A1AA"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Outfit', sans-serif",
+      "body": "'Satoshi', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "body": "text-base text-zinc-600 leading-relaxed",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-zinc-500"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-8",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6",
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full",
+      "badge": "rounded-full"
+    }
+  },
+  "surfaces_and_shadows": {
+    "header": "backdrop-blur-xl bg-white/80 border-b border-zinc-200/50",
+    "card_default": "bg-white border border-zinc-200 shadow-sm transition-all hover:shadow-md hover:-translate-y-1",
+    "glass_card": "backdrop-blur-lg bg-white/70 border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)]",
+    "solid_dark": "bg-zinc-950 text-white"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#00B368] text-white hover:bg-[#009154] rounded-full px-8 py-4 font-semibold transition-all",
+      "outline": "border-2 border-zinc-200 text-zinc-900 hover:border-zinc-900 rounded-full px-8 py-4 font-semibold transition-all"
+    },
+    "inputs": "bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#00B368] focus:border-transparent transition-all",
+    "cards": "overflow-hidden bg-white border border-zinc-200 rounded-2xl"
+  },
+  "sections_structure": [
+    {
+      "name": "Header",
+      "type": "navigation",
+      "layout": "Sticky top-0 z-50 glassmorphism. Logo left, Links center, CTA right. Links: Inicio, Nosotros, Soluciones, Sistemas, Clientes, Servicios, Contacto."
+    },
+    {
+      "name": "Hero",
+      "type": "hero",
+      "layout": "Split layout or large typography overlapping image. H1: 'Soluciones Inteligentes para Edificios Seguros, Eficientes y Conectados'. Generous whitespace. Right side/Background: Architectural glass building image with subtle zoom animation."
+    },
+    {
+      "name": "Nosotros (Mision & Vision)",
+      "type": "content",
+      "layout": "Two columns. Left: Massive '12+' typography (years of experience) in #00B368. Right: Mission and Vision text blocks with clean typography and plenty of breathing room."
+    },
+    {
+      "name": "Soluciones",
+      "type": "bento_grid",
+      "layout": "Tetris Mode A. 7 items (BMS, PCI, Seguridad, GRMS, Infraestructura, Audio y Video, Servicios). Mix of tall, wide, and square cards. Some cards use photography, some use icons/text."
+    },
+    {
+      "name": "Dashboard BMS Showcase",
+      "type": "feature_highlight",
+      "layout": "Dark or Light massive container (Control Room look). Mock UI of a dashboard showing Energy Consumption (chart), Temp (thermostat image), Active Equipment, Alarms. Use Shadcn charts or Recharts for data visualization."
+    },
+    {
+      "name": "Stats & Por qué Greentech",
+      "type": "metrics",
+      "layout": "Grid of 3-4 large numbers with overlines (Years, Projects, Certifications). Minimalist, large typography."
+    },
+    {
+      "name": "Partners & Clientes",
+      "type": "marquee",
+      "layout": "Two opposing scrolling marquees (react-fast-marquee). Marquee 1 (Tech Partners): Use react-icons (SiCisco, SiHoneywell, etc.) or stylized text. Marquee 2 (Clients): JW Marriott, Hilton, ZARA in elegant serif or sans typography."
+    },
+    {
+      "name": "Testimonios",
+      "type": "carousel",
+      "layout": "Clean cards with quotes, subtle borders, no heavy shadows. Generous padding inside cards."
+    },
+    {
+      "name": "Contacto",
+      "type": "form_and_map",
+      "layout": "Two columns. Left: Contact Form (Shadcn inputs) + Contact Info. Right: Minimalist map representation or image of location."
+    },
+    {
+      "name": "Footer",
+      "type": "footer",
+      "layout": "Dark theme (bg-zinc-950). Massive 'GREENTECH' text at the bottom. Links, address (Av. Los Próceres, Diamond Mall)."
+    }
+  ],
+  "media": {
+    "images": {
+      "hero_building": "https://images.pexels.com/photos/37320179/pexels-photo-37320179.jpeg",
+      "hero_alt": "https://images.unsplash.com/photo-1576731753569-3e93a228048c",
+      "bms_dashboard": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      "infrastructure": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+      "security_cctv": "https://images.unsplash.com/photo-1589935447067-5531094415d1",
+      "thermostat_hvac": "https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3"
+    },
+    "icons": {
+      "instructions": "Use lucide-react for UI icons. For brand logos (Cisco, Honeywell, Hikvision, Johnson Controls) use react-icons (e.g. SiCisco, SiHoneywell) if available, or render them as stylized text (e.g., <span className='font-bold text-xl'>HONEYWELL</span>) to avoid using placeholders. Never use placeholder images."
+    }
+  },
+  "animations": {
+    "entrance": "Use framer-motion. Initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }",
+    "stagger": "Stagger children in grids (e.g., Soluciones, Stats) by 0.1s.",
+    "hover": "Scale images slightly on card hover (scale-105) with smooth transition.",
+    "marquee": "Slow, continuous drift for client/partner logos."
+  },
+  "instructions_to_main_agent": [
+    "Install and use 'framer-motion' for all entry animations.",
+    "Install and use 'react-fast-marquee' for the Partners and Clients sections.",
+    "Use 'lucide-react' for UI icons.",
+    "Use 'recharts' or Shadcn Charts for the BMS Dashboard Mock section to show realistic looking line/bar charts for energy consumption.",
+    "Do NOT use generic placeholder images (like via.placeholder.com). Use the provided Unsplash/Pexels URLs or create stylized UI blocks.",
+    "For the floating WhatsApp button, use a fixed positioned button at bottom-right with a green background and a WhatsApp icon (from lucide-react or react-icons) with a subtle pulse animation.",
+    "Ensure all interactive elements have data-testid attributes (e.g., data-testid='hero-cta-button', data-testid='contact-form-submit').",
+    "Strictly follow the 'Outfit' (headings) and 'Satoshi' (body) typography. If they need to be imported, use Google Fonts or standard imports.",
+    "Keep the design 'not overloaded' (no recargada) by strictly adhering to the generous padding (py-24/py-32) and white space.",
+    "For the 7 solutions, build a creative Bento Grid (some spanning 2 cols, some 1 col) rather than a boring equal grid."
+  ]
+}
