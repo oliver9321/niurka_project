@@ -10,7 +10,7 @@ export default function About() {
     <section
       id="nosotros"
       data-testid="about-section"
-      className="relative py-24 md:py-32 bg-zinc-50/60"
+      className="relative py-24 md:py-32 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid lg:grid-cols-12 gap-10 items-start">

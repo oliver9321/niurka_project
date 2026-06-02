@@ -5,7 +5,7 @@ import { TESTIMONIOS } from "@/data/site";
 
 export default function Testimonials() {
   return (
-    <section data-testid="testimonials-section" className="py-24 md:py-32 bg-zinc-50/60">
+    <section data-testid="testimonials-section" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-14">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
