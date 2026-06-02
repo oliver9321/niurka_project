@@ -41,13 +41,11 @@ export default function Header() {
         </nav>
 
         <a
-          href={`https://wa.me/${COMPANY.whatsapp}`}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#contacto"
           data-testid="header-whatsapp-cta"
           className="hidden md:inline-flex items-center gap-2 rounded-full bg-brand-500 hover:bg-brand-400 text-zinc-950 text-sm font-bold px-5 py-2.5 transition-colors"
         >
-          Contáctanos <ArrowRight className="w-4 h-4" />
+          Solicitar Consultoría <ArrowRight className="w-4 h-4" />
         </a>
 
         <button
@@ -77,12 +75,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href={`https://wa.me/${COMPANY.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contacto"
+              onClick={() => setOpen(false)}
               className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 text-zinc-950 font-bold py-3"
             >
-              Contáctanos por WhatsApp
+              Solicitar Consultoría
             </a>
           </div>
         </div>

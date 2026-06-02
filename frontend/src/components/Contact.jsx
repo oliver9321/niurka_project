@@ -117,6 +117,17 @@ export default function Contact() {
             data-testid="contact-form"
             className="lg:col-span-7 bg-zinc-50/70 border border-zinc-200 rounded-3xl p-7 md:p-10"
           >
+            <div
+              data-testid="contact-form-intro"
+              className="mb-7 pb-6 border-b border-zinc-200"
+            >
+              <p className="text-zinc-700 leading-relaxed text-[15px]">
+                ¿Necesita una solución de <span className="font-bold text-zinc-950">seguridad</span>,{" "}
+                <span className="font-bold text-zinc-950">incendio</span> o{" "}
+                <span className="font-bold text-zinc-950">automatización</span>? Nuestro equipo de especialistas está listo para asesorarle.
+              </p>
+            </div>
+
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Nombre completo" required>
                 <input

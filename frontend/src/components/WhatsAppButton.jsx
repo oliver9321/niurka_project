@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   return (
     <a
       href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(
-        "Hola Greentech, me gustaría recibir más información."
+        "Hola, me interesa una cotización para un proyecto."
       )}`}
       target="_blank"
       rel="noopener noreferrer"

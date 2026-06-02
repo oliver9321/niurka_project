@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
 import About from "@/components/About";
+import Especialidades from "@/components/Especialidades";
 import Solutions from "@/components/Solutions";
 import BMSDashboard from "@/components/BMSDashboard";
-import Stats from "@/components/Stats";
 import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -17,10 +18,11 @@ export default function Home() {
       <Header />
       <main id="servicios">
         <Hero />
+        <Stats />
         <About />
+        <Especialidades />
         <Solutions />
         <BMSDashboard />
-        <Stats />
         <Partners />
         <Testimonials />
         <Contact />

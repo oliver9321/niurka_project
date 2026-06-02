@@ -111,6 +111,13 @@ export const TECH_PARTNERS = [
 ];
 
 export const CLIENTS = [
+  "IKEA",
+  "Grupo Ramos",
+  "Ecolab",
+  "BID",
+  "Punta Cana Airport",
+  "Novartis",
+  "The Westin",
   "JW Marriott",
   "Embassy Suites by Hilton",
   "Catalonia Hotels",
@@ -119,23 +126,64 @@ export const CLIENTS = [
   "Be Live Hotels",
   "Grupo SID",
   "ZARA",
-  "IKEA",
   "Plaza Lama",
-  "Grupo Ramos",
   "Holiday Inn",
   "Cap Cana",
   "Casa de Campo",
-  "Punta Cana Airport",
   "Cardinal Health",
-  "Novartis",
   "Hospiten",
 ];
 
+export const ESPECIALIDADES = [
+  {
+    key: "incendio",
+    icon: "Flame",
+    title: "Sistemas Contra Incendio",
+    description:
+      "Detección temprana, supresión con agentes limpios y cumplimiento NFPA.",
+  },
+  {
+    key: "cctv",
+    icon: "Camera",
+    title: "Videovigilancia CCTV",
+    description:
+      "Cámaras IP, analítica de video y centros de monitoreo 24/7.",
+  },
+  {
+    key: "acceso",
+    icon: "KeyRound",
+    title: "Control de Acceso",
+    description:
+      "Torniquetes, tarjetas, biométricos y gestión de visitantes.",
+  },
+  {
+    key: "bms",
+    icon: "Building2",
+    title: "Building Management System (BMS)",
+    description:
+      "Automatización integral: HVAC, iluminación, energía y más.",
+  },
+  {
+    key: "redes",
+    icon: "Network",
+    title: "Redes y Cableado Estructurado",
+    description:
+      "Fibra óptica, datos y conectividad de misión crítica.",
+  },
+  {
+    key: "mantenimiento",
+    icon: "Wrench",
+    title: "Mantenimiento Preventivo y Correctivo",
+    description:
+      "Soporte técnico, contratos y disponibilidad continua.",
+  },
+];
+
 export const STATS = [
-  { value: "12+", label: "Años de experiencia" },
-  { value: "350+", label: "Proyectos entregados" },
-  { value: "120+", label: "Clientes activos" },
-  { value: "NFPA · UL", label: "Certificaciones" },
+  { value: "+12", label: "Años de experiencia" },
+  { value: "+200", label: "Proyectos ejecutados" },
+  { value: "+50", label: "Clientes corporativos" },
+  { value: "24/7", label: "Soporte técnico" },
 ];
 
 export const TESTIMONIOS = [
