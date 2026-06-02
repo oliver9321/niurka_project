@@ -56,17 +56,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" data-testid="contact-section" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid lg:grid-cols-12 gap-12">
+    <section id="contacto" data-testid="contact-section" className="py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-5">
-            <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
+            <div className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
               Contacto
             </div>
-            <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight text-zinc-950 mt-4 leading-tight">
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-zinc-950 mt-3 sm:mt-4 leading-[1.1]">
               ¿Tienes un <span className="text-brand-500">proyecto</span>?
             </h2>
-            <p className="text-zinc-600 mt-5 leading-relaxed text-lg max-w-md">
+            <p className="text-zinc-600 mt-4 sm:mt-5 leading-relaxed text-base md:text-lg max-w-md">
               Estamos listos para ayudarte. Cuéntanos sobre tu edificio y
               recibirás una consultoría con nuestro equipo de ingeniería.
             </p>
@@ -150,7 +150,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             data-testid="contact-form"
-            className="lg:col-span-7 bg-white border border-zinc-200 rounded-3xl p-7 md:p-10"
+            className="lg:col-span-7 bg-white border border-zinc-200 rounded-3xl p-6 sm:p-7 md:p-10"
           >
             <div
               data-testid="contact-form-intro"

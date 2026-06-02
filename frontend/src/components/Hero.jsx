@@ -14,7 +14,7 @@ export default function Hero() {
     <section
       id="inicio"
       data-testid="hero-section"
-      className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden"
+      className="relative pt-24 sm:pt-28 md:pt-36 pb-12 md:pb-24 overflow-hidden"
     >
       {/* Subtle grid pattern base */}
       <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
@@ -91,14 +91,14 @@ export default function Hero() {
         />
       </svg>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8 z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-8 z-10">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/70 backdrop-blur px-4 py-1.5 text-xs font-semibold text-zinc-600 tracking-wider uppercase"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/70 backdrop-blur px-3 sm:px-4 py-1.5 text-[10px] sm:text-xs font-semibold text-zinc-600 tracking-wider uppercase"
               data-testid="hero-eyebrow"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
@@ -109,7 +109,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="font-display font-black text-[2.25rem] sm:text-5xl lg:text-[3.5rem] leading-[1.02] tracking-[-0.035em] text-zinc-950 mt-6"
+              className="font-display font-black text-[2rem] sm:text-[2.5rem] md:text-5xl lg:text-[3.5rem] leading-[1.05] tracking-[-0.035em] text-zinc-950 mt-5 sm:mt-6"
               data-testid="hero-heading"
             >
               Soluciones inteligentes para edificios{" "}
@@ -149,19 +149,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-9 flex flex-wrap items-center gap-4"
+              className="mt-8 md:mt-9 flex flex-wrap items-center gap-3 sm:gap-4"
             >
               <a
                 href="#soluciones"
                 data-testid="hero-cta-primary"
-                className="inline-flex items-center gap-2 rounded-full bg-zinc-950 text-white font-semibold px-7 py-4 hover:bg-graphite-700 transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-zinc-950 text-white font-semibold px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base hover:bg-graphite-700 transition-colors"
               >
                 Nuestras soluciones <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#nosotros"
                 data-testid="hero-cta-secondary"
-                className="inline-flex items-center gap-2 rounded-full border border-zinc-300 text-zinc-900 font-semibold px-7 py-4 hover:border-zinc-900 transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-zinc-300 text-zinc-900 font-semibold px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base hover:border-zinc-900 transition-colors"
               >
                 Conoce más
               </a>

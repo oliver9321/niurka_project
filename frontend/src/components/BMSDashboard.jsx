@@ -52,8 +52,8 @@ export default function BMSDashboard() {
       <div className="absolute inset-0 bg-grid-dark opacity-60" />
       <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-brand-500/20 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -61,13 +61,13 @@ export default function BMSDashboard() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-400">
+              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-brand-400">
                 Edificios inteligentes
               </div>
-              <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight mt-4 leading-tight">
+              <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 sm:mt-4 leading-[1.1]">
                 Tu edificio en <span className="text-brand-400">una sola pantalla</span>.
               </h2>
-              <p className="text-zinc-400 mt-6 leading-relaxed text-lg">
+              <p className="text-zinc-400 mt-5 md:mt-6 leading-relaxed text-base md:text-lg">
                 Integramos todos tus sistemas en una interfaz única para que
                 tengas control total en tiempo real, ahorres energía y tomes
                 decisiones con data, no con suposiciones.
@@ -102,19 +102,19 @@ export default function BMSDashboard() {
             className="lg:col-span-7"
           >
             <div className="rounded-3xl bg-zinc-900/80 backdrop-blur border border-zinc-800 shadow-2xl overflow-hidden">
-              <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-800">
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-zinc-800">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                   <div className="w-2.5 h-2.5 rounded-full bg-brand-500" />
                 </div>
-                <div className="font-mono text-xs text-zinc-400">
+                <div className="font-mono text-[10px] sm:text-xs text-zinc-400 hidden sm:block">
                   greentech.bms · Dashboard general
                 </div>
-                <div className="text-xs text-zinc-500">en vivo</div>
+                <div className="text-[10px] sm:text-xs text-zinc-500">en vivo</div>
               </div>
 
-              <div className="p-5 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 sm:p-5 md:p-6 grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                 <KPI
                   icon={Bolt}
                   label="Consumo de energía"
@@ -139,14 +139,14 @@ export default function BMSDashboard() {
                   positive
                 />
 
-                <div className="md:col-span-2 rounded-2xl bg-zinc-950/60 border border-zinc-800 p-5">
+                <div className="col-span-2 md:col-span-2 rounded-2xl bg-zinc-950/60 border border-zinc-800 p-4 sm:p-5">
                   <div className="flex items-center justify-between mb-2">
-                    <div className="text-xs uppercase tracking-wider text-zinc-500 font-semibold">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-500 font-semibold">
                       Consumo semanal · kWh
                     </div>
-                    <div className="text-xs text-brand-400 font-mono">−18%</div>
+                    <div className="text-[10px] sm:text-xs text-brand-400 font-mono">−18%</div>
                   </div>
-                  <div className="h-44">
+                  <div className="h-36 sm:h-44">
                     <ResponsiveContainer width="100%" height="100%">
                       <AreaChart data={energyData} margin={{ left: -20, right: 8, top: 8, bottom: 0 }}>
                         <defs>
@@ -172,8 +172,8 @@ export default function BMSDashboard() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-zinc-950/60 border border-zinc-800 p-5">
-                  <div className="text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-3 flex items-center gap-2">
+                <div className="col-span-2 md:col-span-1 rounded-2xl bg-zinc-950/60 border border-zinc-800 p-4 sm:p-5">
+                  <div className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-3 flex items-center gap-2">
                     <AlertTriangle className="w-3.5 h-3.5" /> Alarmas activas
                   </div>
                   <ul className="space-y-3">
@@ -209,25 +209,25 @@ export default function BMSDashboard() {
 
 function KPI({ icon: Icon, label, value, unit, delta, positive }) {
   return (
-    <div className="rounded-2xl bg-zinc-950/60 border border-zinc-800 p-5">
+    <div className="rounded-2xl bg-zinc-950/60 border border-zinc-800 p-4 sm:p-5">
       <div className="flex items-center justify-between">
-        <div className="w-9 h-9 rounded-xl bg-brand-500/15 text-brand-400 grid place-items-center">
-          <Icon className="w-4.5 h-4.5" />
+        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-500/15 text-brand-400 grid place-items-center">
+          <Icon className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
         </div>
         <span
-          className={`text-xs font-mono ${
+          className={`text-[10px] sm:text-xs font-mono ${
             positive ? "text-brand-400" : "text-zinc-400"
           }`}
         >
           {delta}
         </span>
       </div>
-      <div className="text-xs uppercase tracking-wider text-zinc-500 font-semibold mt-4">
+      <div className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-500 font-semibold mt-3 sm:mt-4">
         {label}
       </div>
-      <div className="font-display font-black text-3xl text-white mt-1">
+      <div className="font-display font-black text-2xl sm:text-3xl text-white mt-1">
         {value}
-        <span className="text-zinc-500 text-base font-bold ml-1">{unit}</span>
+        <span className="text-zinc-500 text-sm sm:text-base font-bold ml-1">{unit}</span>
       </div>
     </div>
   );

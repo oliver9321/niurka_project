@@ -21,9 +21,9 @@ export default function Footer() {
     >
       <div className="absolute inset-0 bg-grid-dark opacity-40" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid lg:grid-cols-12 gap-10 pb-14 border-b border-zinc-800">
-          <div className="lg:col-span-5">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 pb-12 md:pb-14 border-b border-zinc-800">
+          <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center gap-3">
               <Logo className="w-11 h-11" />
               <div className="leading-tight">
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-5">
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-4 md:mb-5">
               Enlaces rápidos
             </div>
             <ul className="space-y-3">
@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-5">
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-4 md:mb-5">
               Soluciones
             </div>
             <ul className="space-y-3">
@@ -99,8 +99,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
-            <div className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-5">
+          <div className="col-span-2 lg:col-span-2">
+            <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-4 md:mb-5">
               Oficinas
             </div>
             <p className="text-zinc-400 text-sm leading-relaxed">
@@ -121,13 +121,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative mt-10 mb-10">
-          <div className="font-display font-black tracking-[-0.04em] text-center text-zinc-900 select-none text-[18vw] leading-none">
+        <div className="relative mt-8 md:mt-10 mb-8 md:mb-10 overflow-hidden">
+          <div className="font-display font-black tracking-[-0.04em] text-center text-zinc-900 select-none text-[22vw] md:text-[18vw] leading-none">
             GREENTECH
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-zinc-500">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs sm:text-sm text-zinc-500">
           <div>© {new Date().getFullYear()} Greentech SRL. Todos los derechos reservados.</div>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-brand-400">Términos</a>

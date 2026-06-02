@@ -12,7 +12,7 @@ export default function About() {
       data-testid="about-section"
       className="relative py-24 md:py-32 bg-white"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
             <motion.div
@@ -21,10 +21,10 @@ export default function About() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
+              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
                 Quiénes somos
               </div>
-              <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight text-zinc-950 mt-4 leading-tight">
+              <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-zinc-950 mt-3 sm:mt-4 leading-[1.1]">
                 Más de 12 años <span className="text-brand-500">protegiendo vidas</span> y tu inversión.
               </h2>
               <p className="text-zinc-700 mt-6 leading-relaxed text-lg">

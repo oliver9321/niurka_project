@@ -5,18 +5,18 @@ import { TESTIMONIOS } from "@/data/site";
 
 export default function Testimonials() {
   return (
-    <section data-testid="testimonials-section" className="py-24 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="mb-14">
-          <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
+    <section data-testid="testimonials-section" className="py-20 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+        <div className="mb-10 md:mb-14">
+          <div className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
             Testimonios
           </div>
-          <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight text-zinc-950 mt-4 max-w-3xl leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight text-zinc-950 mt-3 sm:mt-4 max-w-3xl leading-[1.1]">
             Lo que dicen quienes ya operan con <span className="text-brand-500">Greentech</span>.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {TESTIMONIOS.map((t, i) => (
             <motion.figure
               key={t.name + i}
@@ -25,7 +25,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               data-testid={`testimonial-${i}`}
-              className="bg-white rounded-3xl border border-zinc-200 p-8 hover:border-brand-500 transition-colors"
+              className="bg-white rounded-3xl border border-zinc-200 p-6 sm:p-8 hover:border-brand-500 transition-colors sm:[&:nth-child(3)]:col-span-2 lg:[&:nth-child(3)]:col-span-1"
             >
               <Quote className="w-6 h-6 text-brand-500" />
               <blockquote className="mt-5 text-zinc-800 leading-relaxed text-[17px]">
