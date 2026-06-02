@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { MapPin, Phone, Mail, Send, MessageCircle, CheckCircle2, AlertCircle } from "lucide-react";
-import { COMPANY } from "@/data/site";
+import { MapPin, Phone, Mail, Send, MessageCircle, CheckCircle2, AlertCircle, UserRound } from "lucide-react";
+import { COMPANY, SALES_CONTACTS } from "@/data/site";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -96,6 +96,41 @@ export default function Contact() {
             >
               <MessageCircle className="w-5 h-5" /> Escríbenos por WhatsApp
             </a>
+
+            {/* Sales contacts from the corporate deck */}
+            <div className="mt-10" data-testid="sales-contacts">
+              <div className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                Contactos directos
+              </div>
+              <div className="grid sm:grid-cols-1 gap-3">
+                {SALES_CONTACTS.map((c) => (
+                  <div
+                    key={c.email}
+                    className="flex items-start gap-3 p-4 rounded-xl bg-white border border-zinc-200 hover:border-brand-500 transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-brand-50 text-brand-600 grid place-items-center shrink-0">
+                      <UserRound className="w-4 h-4" />
+                    </div>
+                    <div className="leading-tight min-w-0 flex-1">
+                      <div className="text-[10px] uppercase tracking-wider text-zinc-500 font-semibold">
+                        {c.area}
+                      </div>
+                      <div className="font-display font-bold text-zinc-950 text-sm mt-0.5">
+                        {c.name}
+                      </div>
+                      <div className="text-xs text-zinc-600 mt-1 flex flex-wrap gap-x-3 gap-y-0.5">
+                        <a href={`tel:${c.mobile}`} className="hover:text-brand-600">
+                          {c.mobile}
+                        </a>
+                        <a href={`mailto:${c.email}`} className="hover:text-brand-600 break-all">
+                          {c.email}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-10 rounded-2xl overflow-hidden border border-zinc-200 aspect-[16/9]">
               <iframe

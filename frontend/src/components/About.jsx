@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Target, Eye, Award } from "lucide-react";
+import { Target, Eye, Heart, Award, ShieldCheck } from "lucide-react";
+import { VALUES } from "@/data/site";
+
+const VALUE_ICONS = [Heart, Award, ShieldCheck];
 
 export default function About() {
   return (
@@ -19,18 +22,25 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-600">
-                Nosotros
+                Quiénes somos
               </div>
               <h2 className="font-display font-black text-4xl md:text-5xl tracking-tight text-zinc-950 mt-4 leading-tight">
-                Ingeniería que <span className="text-brand-500">protege e impulsa</span> tus inversiones.
+                Más de 12 años <span className="text-brand-500">protegiendo vidas</span> y tu inversión.
               </h2>
-              <p className="text-zinc-600 mt-6 leading-relaxed text-lg">
-                Greentech SRL es una empresa dominicana especializada en
-                integración de sistemas inteligentes para edificios. Desde
-                hace más de 12 años protegemos vidas, optimizamos operaciones
-                y diseñamos espacios verdaderamente conectados.
+              <p className="text-zinc-700 mt-6 leading-relaxed text-lg">
+                Somos una compañía integradora de sistemas de seguridad y
+                automatización a nivel institucional y residencial. Nuestro
+                concepto es <strong>maximizar la eficiencia</strong> de tus
+                sistemas, garantizar el confort y la seguridad de tus usuarios,
+                con aplicaciones sencillas y productos de alta gama.
               </p>
-              <div className="mt-8 flex items-center gap-6">
+              <p className="text-zinc-600 mt-5 leading-relaxed">
+                Nuestro equipo de profesionales está altamente capacitado,
+                entrenado y certificado para gestionar tus proyectos con
+                cumplimiento normativo de rigor.
+              </p>
+
+              <div className="mt-10 flex items-center gap-6">
                 <div className="font-display font-black text-7xl text-zinc-950 leading-none">
                   12<span className="text-brand-500">+</span>
                 </div>
@@ -48,25 +58,13 @@ export default function About() {
                 icon: Target,
                 title: "Misión",
                 text:
-                  "Ser la empresa de ingeniería especializada en integración de sistemas más vanguardista del mercado, brindando soluciones para los proyectos más exigentes con el mejor servicio post-venta.",
+                  "Ser la empresa de ingeniería especializada en integración de sistemas más vanguardista del mercado, brindando soluciones a los proyectos más exigentes que requieran el mejor servicio post-venta.",
               },
               {
                 icon: Eye,
                 title: "Visión",
                 text:
-                  "Ser la primera opción como empresa de ingeniería en resolución de proyectos, servicios post-venta e integración de soluciones en todos los mercados verticales.",
-              },
-              {
-                icon: Award,
-                title: "Calidad & Cumplimiento",
-                text:
-                  "Equipo certificado, estándares NFPA y productos UL Listed. Gestión de proyectos con rigor regulatorio y altos estándares de calidad.",
-              },
-              {
-                icon: Award,
-                title: "Tecnología & Marcas",
-                text:
-                  "Distribuidor autorizado de marcas líderes: Johnson Controls, Honeywell, Notifier, Hikvision, Axis, Cisco, Crestron y más.",
+                  "Ser la primera opción como compañía de ingeniería para la resolución de tus proyectos, servicios post-venta e integración de soluciones en todos los mercados verticales.",
               },
             ].map((c, i) => (
               <motion.article
@@ -76,7 +74,7 @@ export default function About() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 data-testid={`about-card-${c.title.toLowerCase()}`}
-                className="relative bg-white rounded-2xl border border-zinc-200 p-7 hover:border-brand-500 hover:-translate-y-1 transition-all"
+                className="relative bg-white rounded-2xl border border-zinc-200 p-7 hover:border-brand-500 hover:-translate-y-1 transition-all sm:col-span-1"
               >
                 <div className="w-11 h-11 rounded-xl bg-zinc-950 text-brand-400 grid place-items-center">
                   <c.icon className="w-5 h-5" />
@@ -89,8 +87,73 @@ export default function About() {
                 </p>
               </motion.article>
             ))}
+
+            <motion.article
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.16 }}
+              className="sm:col-span-2 relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950 text-white p-7 md:p-9"
+            >
+              <div className="absolute inset-0 bg-grid-dark opacity-30" />
+              <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-brand-500/20 blur-3xl" />
+
+              <div className="relative">
+                <div className="text-xs font-bold uppercase tracking-[0.25em] text-brand-400 mb-4">
+                  Nuestros valores
+                </div>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {VALUES.map((v, i) => {
+                    const Icon = VALUE_ICONS[i];
+                    return (
+                      <div
+                        key={v.title}
+                        data-testid={`value-${v.title.toLowerCase()}`}
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-brand-500/15 text-brand-400 grid place-items-center">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <h4 className="font-display font-bold text-lg mt-4">
+                          {v.title}
+                        </h4>
+                        <p className="text-zinc-400 text-sm mt-2 leading-relaxed">
+                          {v.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </motion.article>
           </div>
         </div>
+
+        {/* 5 Pillars from the corporate deck: Controles · Incendio · Seguridad · Energía · Data */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 pt-10 border-t border-zinc-200"
+        >
+          <div className="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-5 text-center">
+            Cinco pilares
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-y-4 gap-x-2 md:gap-x-6">
+            {["Controles", "Incendio", "Seguridad", "Energía", "Data"].map((p, i) => (
+              <React.Fragment key={p}>
+                <span className="font-display font-bold text-xl md:text-2xl tracking-tight text-zinc-900">
+                  {p}
+                </span>
+                {i < 4 && (
+                  <span className="text-brand-500 font-display font-black text-2xl md:text-3xl">
+                    ·
+                  </span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
