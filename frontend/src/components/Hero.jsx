@@ -14,12 +14,84 @@ export default function Hero() {
     <section
       id="inicio"
       data-testid="hero-section"
-      className="relative pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden"
+      className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
-      <div className="absolute top-1/2 -right-40 w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-3xl pointer-events-none" />
+      {/* Subtle grid pattern base */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+      {/* Lime glow blob on the right */}
+      <div className="absolute top-1/3 -right-40 w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-3xl pointer-events-none" />
+
+      {/* Abstract wave pattern behind the headline (left side) */}
+      <svg
+        className="absolute left-0 top-20 w-[60%] h-[520px] text-zinc-200/70 pointer-events-none -z-0"
+        viewBox="0 0 800 600"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id="hero-wave" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#A4D233" stopOpacity="0.10" />
+            <stop offset="100%" stopColor="#A4D233" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M -100 280 C 120 180, 260 360, 480 280 S 760 200, 900 300"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.7"
+        />
+        <path
+          d="M -100 340 C 140 240, 280 420, 500 340 S 780 260, 920 360"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.5"
+        />
+        <path
+          d="M -100 400 C 160 300, 300 480, 520 400 S 800 320, 940 420"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          fill="none"
+          opacity="0.35"
+        />
+        <ellipse cx="240" cy="320" rx="380" ry="220" fill="url(#hero-wave)" />
+      </svg>
+
+      {/* Lime connector curves flowing from top-right toward the image */}
+      <svg
+        className="absolute top-16 right-0 w-[55%] h-[420px] pointer-events-none -z-0 hidden md:block"
+        viewBox="0 0 700 500"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M 700 20 Q 480 80, 520 220 T 360 460"
+          stroke="#A4D233"
+          strokeOpacity="0.55"
+          strokeWidth="1.5"
+          fill="none"
+        />
+        <path
+          d="M 700 80 Q 500 160, 560 280 T 420 480"
+          stroke="#A4D233"
+          strokeOpacity="0.35"
+          strokeWidth="1.5"
+          fill="none"
+        />
+        <path
+          d="M 700 140 Q 540 220, 600 340 T 480 500"
+          stroke="#A4D233"
+          strokeOpacity="0.2"
+          strokeWidth="1.5"
+          fill="none"
+        />
+      </svg>
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-8 z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
             <motion.div
@@ -37,25 +109,35 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="font-display font-black text-[2.75rem] sm:text-6xl lg:text-7xl leading-[0.95] tracking-[-0.04em] text-zinc-950 mt-6"
+              className="font-display font-black text-[2.25rem] sm:text-5xl lg:text-[3.5rem] leading-[1.02] tracking-[-0.035em] text-zinc-950 mt-6"
               data-testid="hero-heading"
             >
-              Soluciones inteligentes <br className="hidden sm:block" />
-              para edificios{" "}
+              Soluciones inteligentes para edificios{" "}
               <span className="relative inline-block text-brand-500">
                 seguros
-                <svg viewBox="0 0 200 12" className="absolute -bottom-2 left-0 w-full" preserveAspectRatio="none">
-                  <path d="M2 8 Q60 2 120 6 T 198 4" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <svg
+                  viewBox="0 0 200 12"
+                  className="absolute -bottom-1.5 left-0 w-full"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M2 8 Q60 2 120 6 T 198 4"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </span>
-              ,<br className="hidden sm:block" /> eficientes y conectados.
+              , eficientes y{" "}
+              <span className="text-brand-500">conectados</span>.
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-8 max-w-xl text-lg text-zinc-600 leading-relaxed"
+              className="mt-7 max-w-xl text-[17px] text-zinc-600 leading-relaxed"
               data-testid="hero-description"
             >
               Integramos tecnología de vanguardia en automatización, protección
@@ -67,7 +149,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-10 flex flex-wrap items-center gap-4"
+              className="mt-9 flex flex-wrap items-center gap-4"
             >
               <a
                 href="#soluciones"
@@ -85,7 +167,7 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-5">
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5">
               {features.map((f, i) => (
                 <motion.div
                   key={f.label}
@@ -121,7 +203,7 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 backdrop-blur-xl bg-white/90 rounded-2xl p-4 flex items-center gap-3 border border-white/40">
-                <div className="w-10 h-10 rounded-xl bg-brand-500 grid place-items-center text-white">
+                <div className="w-10 h-10 rounded-xl bg-brand-500 grid place-items-center text-zinc-950">
                   <Activity className="w-5 h-5" />
                 </div>
                 <div className="leading-tight">
