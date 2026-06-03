@@ -150,7 +150,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             data-testid="contact-form"
-            className="lg:col-span-7 bg-white border border-zinc-200 rounded-3xl p-6 sm:p-7 md:p-10"
+            className="lg:col-span-7 self-start bg-white border border-zinc-200 rounded-3xl p-6 sm:p-7 md:p-10"
           >
             <div
               data-testid="contact-form-intro"
