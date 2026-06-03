@@ -24,7 +24,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 h-16 sm:h-20 flex items-center justify-between">
         <a href="#inicio" className="flex items-center shrink-0" data-testid="logo-link">
-          <Logo className="h-9 sm:h-10 w-auto" />
+          <Logo className="h-14 w-auto" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">
