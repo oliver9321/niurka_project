@@ -1,0 +1,34 @@
+# global options
+{
+    admin off
+    persist_config off
+    auto_https off
+    log {
+        format json
+    }
+    servers {
+        trusted_proxies static private_ranges 100.0.0.0/8
+    }
+}
+
+# site block
+:{$PORT:3000} {
+    log {
+        format json
+    }
+
+    # health check
+    rewrite /health /*
+
+    # serve from the 'build' folder (CRA outputs to build/)
+    root * build
+
+    # enable gzip
+    encode gzip
+
+    # serve files
+    file_server
+
+    # SPA fallback - redirect all paths to index.html
+    try_files {path} /index.html
+}
