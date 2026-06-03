@@ -25,15 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 pb-12 md:pb-14 border-b border-zinc-800">
           <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center gap-3">
-              <Logo className="w-11 h-11" />
-              <div className="leading-tight">
-                <div className="font-display font-bold text-white text-lg">
-                  {COMPANY.name}
-                </div>
-                <div className="text-[10px] tracking-[0.25em] uppercase text-zinc-500">
-                  {COMPANY.tagline}
-                </div>
-              </div>
+              <Logo className="w-11 h-11" showWordmark />
             </div>
             <p className="text-zinc-400 mt-6 max-w-md leading-relaxed">
               Ingeniería especializada en integración de sistemas inteligentes
@@ -121,13 +113,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative mt-8 md:mt-10 mb-8 md:mb-10 overflow-hidden">
-          <div className="font-display font-black tracking-[-0.04em] text-center text-zinc-900 select-none text-[22vw] md:text-[18vw] leading-none">
-            GREENTECH
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs sm:text-sm text-zinc-500">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pt-8 md:pt-10 text-xs sm:text-sm text-zinc-500">
           <div>© {new Date().getFullYear()} Greentech SRL. Todos los derechos reservados.</div>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-brand-400">Términos</a>
