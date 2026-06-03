@@ -2,9 +2,9 @@
 const path = require("path");
 require("dotenv").config();
 
-// Check if we're in development/preview mode (not production build)
-// Craco sets NODE_ENV=development for start, NODE_ENV=production for build
-const isDevServer = process.env.NODE_ENV !== "production";
+// Only apply visual edits in actual dev server mode, not during production build
+// process.env.CRACO_COMMAND is 'start' for dev server, 'build' for production build
+const isDevServer = process.env.CRACO_COMMAND === "start";
 
 // Environment variable overrides
 const config = {
@@ -111,9 +111,14 @@ webpackConfig.devServer = (devServerConfig) => {
   return devServerConfig;
 };
 
+<<<<<<< HEAD
 // Wrap with visual edits (automatically adds babel plugin, dev server, and overlay in dev mode)
 // Only in local development — never in CI/production builds
 if (isDevServer && !process.env.CI) {
+=======
+// Wrap with visual edits ONLY in dev server mode, not during production build
+if (isDevServer) {
+>>>>>>> 108dd608293d01dafc18852e1a763de74fe10635
   try {
     const { withVisualEdits } = require("@emergentbase/visual-edits/craco");
     webpackConfig = withVisualEdits(webpackConfig);
@@ -129,3 +134,4 @@ if (isDevServer && !process.env.CI) {
 }
 
 module.exports = webpackConfig;
+
