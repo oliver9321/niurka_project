@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Especialidades from "@/components/Especialidades";
 import Solutions from "@/components/Solutions";
 import BMSDashboard from "@/components/BMSDashboard";
+import Distributors from "@/components/Distributors";
 import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -23,6 +24,7 @@ export default function Home() {
         <Especialidades />
         <Solutions />
         <BMSDashboard />
+        <Distributors />
         <Partners />
         <Testimonials />
         <Contact />
