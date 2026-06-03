@@ -128,4 +128,3 @@ if (isDevServer && !process.env.CI) {
 }
 
 module.exports = webpackConfig;
-
