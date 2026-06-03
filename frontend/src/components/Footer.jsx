@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 pb-12 md:pb-14 border-b border-zinc-800">
           <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center gap-3">
-              <Logo className="w-11 h-11" showWordmark />
+              <Logo className="h-12 w-auto" showWordmark />
             </div>
             <p className="text-zinc-400 mt-6 max-w-md leading-relaxed">
               Ingeniería especializada en integración de sistemas inteligentes
