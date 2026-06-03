@@ -26,7 +26,16 @@
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
+        <div id="root">
+            <!-- Inline logo to prevent flash while React loads -->
+            <div style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;height:80px;padding:0 20px;">
+                <svg viewBox="0 0 64 64" style="width:40px;height:40px;" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Greentech logo">
+                    <path d="M6 6 H48 V20 H22 V44 H22 L14 56 H6 Z" fill="#7A7B81"/>
+                    <path d="M24 24 L52 24 L46 34 L24 34 Z" fill="#A4D233"/>
+                    <path d="M34 36 L48 36 L40 56 L26 56 Z" fill="#A4D233"/>
+                </svg>
+            </div>
+        </div>
         <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,8 +46,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-           
-        </a>
         <script>
             !(function (t, e) {
                 var o, n, p, r;
